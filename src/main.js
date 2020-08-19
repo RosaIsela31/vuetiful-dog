@@ -3,10 +3,10 @@ import App from "./App.vue";
 import "./assets/css/index.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faDog } from "@fortawesome/free-solid-svg-icons";
+import { faDog, faHeart, faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faDog);
+library.add(faDog, faHeart, faPaw);
 
 Vue.config.productionTip = false;
 Vue.component("font-awesome-icon", FontAwesomeIcon);
