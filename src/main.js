@@ -10,7 +10,7 @@ import {
 import {
   faDog,
   faHeart,
-  faPaw
+  faPaw,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon

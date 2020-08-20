@@ -1,9 +1,9 @@
 // import axios from "axios";
 
-const url = "https://api.coincap.io/v2";
+const url = "https://www.breakingbadapi.com/api/characters/";
 
 const getApi = () => {
-  return fetch(`${url}/assets?limit=20`)
+  return fetch(`${url}`)
     .then((res) => res.json())
     .then((res) => res.data);
 };
