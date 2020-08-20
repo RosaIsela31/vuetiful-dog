@@ -1,16 +1,28 @@
 <template>
-  <div id="app">
-    <PxHeader />
-  </div>
+  <main>
+    <px-header />
+    <router-view />
+  </main>
 </template>
 
 <script>
 import PxHeader from "./components/PxHeader";
 
+import api from "./api";
 export default {
   name: "App",
   components: {
     PxHeader,
+  },
+
+  data() {
+    return {
+      assets: [],
+    };
+  },
+
+  created() {
+    api.getApi().then((assets) => (this.assets = assets));
   },
 };
 </script>
