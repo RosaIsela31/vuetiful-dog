@@ -1,10 +1,20 @@
 <template>
   <header class="header">
-    <div class="wrapper-icon-title">
-      <div class="wrapper-dog">
-        <font-awesome-icon icon="dog" class="icon-dog" />
+    <div class="wrapper-logo-search">
+      <div class="wrapper-icon-title">
+        <div class="wrapper-dog">
+          <font-awesome-icon icon="dog" class="icon-dog" />
+        </div>
+        <h2 class="title">Vuetiful Dog</h2>
       </div>
-      <h2 class="title">Vuetiful Dog</h2>
+      <div class="wrapper-search">
+        <input
+          type="text"
+          placeholder="🔎   Write something, example: 'dog'"
+          class="search"
+        />
+        <input type="submit" value="search" class="btn-search" />
+      </div>
     </div>
     <div class="divisor-line"></div>
     <div class="wrapper-list">
@@ -50,6 +60,10 @@ export default {
   margin-right: 0.3rem;
 }
 
+.pointing:hover .icon-list {
+  color: #48b8eb;
+}
+
 .wrapper-icon-title {
   display: flex;
 }
@@ -64,6 +78,10 @@ export default {
   justify-content: center;
   border-radius: 100px;
   margin: 1rem 1rem 0 1rem;
+}
+
+.wrapper-dog:hover {
+  background-color: #48b8eb;
 }
 
 .divisor-line {
@@ -83,13 +101,67 @@ li {
   margin: 0 50px 0 0;
 }
 
+.search {
+  -webkit-appearance: none;
+  border-radius: 7px;
+  width: 18rem;
+  height: 2.5rem;
+  margin: 1.5rem 0 0 0;
+  padding-left: 0.5rem;
+  border: none;
+}
+
+.btn-search {
+  height: 2.6rem;
+  border-radius: 7px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #48b8eb;
+  border: none;
+  color: #ffffff;
+  margin: 1.5rem 0 0 1rem;
+}
+
+.btn-search:hover {
+  background-color: #c8d542;
+}
+
+.btn-search:focus,
+.search:focus {
+  outline: none;
+}
+
 .wrapper-list {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
+.wrapper-search {
+  display: flex;
+}
+
+.wrapper-logo-search {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
 li:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024) {
+  .wrapper-logo-search {
+    grid-template-columns: 100%;
+  }
+
+  .header {
+    height: 14rem;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .search {
+    margin-left: 1rem;
+    display: none;
+  }
 }
 </style>
