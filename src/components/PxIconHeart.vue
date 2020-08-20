@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "PxIconHeart",
+  name: "PxIconHeart"
 };
 </script>
 

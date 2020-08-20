@@ -8,6 +8,6 @@
 import PxContainer from "@/components/PxContainer";
 export default {
   name: "Home",
-  components: { PxContainer },
+  components: { PxContainer }
 };
 </script>

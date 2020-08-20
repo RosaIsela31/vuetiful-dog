@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: "PxHeader",
+  name: "PxHeader"
 };
 </script>
 
@@ -81,7 +81,11 @@ export default {
 }
 
 .wrapper-dog:hover {
-  background-color: #48b8eb;
+  background-color: #ffffff;
+}
+
+.wrapper-dog:hover .icon-dog {
+  color: #c8d542;
 }
 
 .divisor-line {

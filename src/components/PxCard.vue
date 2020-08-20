@@ -3,7 +3,12 @@
     <div>
       <px-icon-heart />
     </div>
-    <div></div>
+    <div>
+      <p>{{ title }}</p>
+      <figure class="figure">
+        <img :src="image" alt="image" />
+      </figure>
+    </div>
   </div>
 </template>
 
@@ -11,8 +16,7 @@
 import PxIconHeart from "@/components/PxIconHeart";
 export default {
   name: "PxCard",
-  props: ["title", "key", "id"],
-
+  props: ["title", "key", "id", "image"],
   components: {
     PxIconHeart,
   },
@@ -30,8 +34,5 @@ export default {
     0 0 0 1px rgb(255, 255, 255), 0.1em 0.1em 1em rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: 15% 85%;
-}
-
-.wrapper-icon-heart {
 }
 </style>
