@@ -9,11 +9,11 @@
     <div class="divisor-line"></div>
     <div class="wrapper-list">
       <ul>
-        <li>
+        <li class="pointing">
           <font-awesome-icon icon="paw" class="icon-list" />
           Random
         </li>
-        <li>
+        <li class="pointing">
           <font-awesome-icon icon="heart" class="icon-list" />
           Favorites
         </li>
@@ -38,6 +38,7 @@ export default {
 
 .title {
   font-family: "Lobster", cursive;
+  margin-top: 2rem;
 }
 
 .icon-dog {
@@ -62,13 +63,13 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  margin: 0.7rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .divisor-line {
   height: 0.2rem;
   background-color: #48b8eb;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 ul {
@@ -86,5 +87,9 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+li:hover {
+  cursor: pointer;
 }
 </style>
