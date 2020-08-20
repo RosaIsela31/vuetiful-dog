@@ -12,18 +12,18 @@ import api from "./api";
 export default {
   name: "App",
   components: {
-    PxHeader,
+    PxHeader
   },
 
   data() {
     return {
-      assets: [],
+      assets: []
     };
   },
 
   created() {
-    api.getApi().then((assets) => (this.assets = assets));
-  },
+    api.getApi().then(assets => (this.assets = assets));
+  }
 };
 </script>
 
