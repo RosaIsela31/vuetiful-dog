@@ -9,11 +9,17 @@
       </div>
       <div class="wrapper-search">
         <input
+          v-model="search"
           type="text"
           placeholder="🔎   Write something, example: 'dog'"
           class="search"
         />
-        <input type="submit" value="search" class="btn-search" />
+        <input
+          type="submit"
+          value="search"
+          class="btn-search"
+          @click="buttonClick"
+        />
       </div>
     </div>
     <div class="divisor-line"></div>
@@ -34,7 +40,20 @@
 
 <script>
 export default {
-  name: "PxHeader"
+  name: "PxHeader",
+
+  props: ["search"],
+
+  data() {
+    return {};
+  },
+
+  methods: {
+    buttonClick() {
+      console.log("this.search", this.search);
+      this.$emit("customclick", this.search);
+    }
+  }
 };
 </script>
 
