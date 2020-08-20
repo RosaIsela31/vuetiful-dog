@@ -1,19 +1,13 @@
 <template>
   <main>
-    <px-header />
     <router-view />
   </main>
 </template>
 
 <script>
-import PxHeader from "./components/PxHeader";
-
 import api from "./api";
 export default {
   name: "App",
-  components: {
-    PxHeader
-  },
 
   data() {
     return {
