@@ -15,7 +15,7 @@ export default new Router({
     },
     {
       path: "/fav",
-      name: "fav",
+      name: "favorites",
       component: Favorites
     }
   ]

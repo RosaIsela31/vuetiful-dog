@@ -1,13 +1,13 @@
 <template>
   <div>
-    <px-container />
+    <px-favorites />
   </div>
 </template>
 
 <script>
-import PxContainer from "@/components/PxContainer";
+import PxFavorites from "@/components/PxFavorites";
 export default {
   name: "Favorites",
-  components: { PxContainer }
+  components: { PxFavorites }
 };
 </script>

@@ -2,9 +2,11 @@
   <header class="header">
     <div class="wrapper-logo-search">
       <div class="wrapper-icon-title">
-        <div class="wrapper-dog">
-          <font-awesome-icon icon="dog" class="icon-dog" />
-        </div>
+        <router-link to="/" class="router-styles">
+          <div class="wrapper-dog">
+            <font-awesome-icon icon="dog" class="icon-dog" />
+          </div>
+        </router-link>
         <h2 class="title">Vuetiful Dog</h2>
       </div>
       <div class="wrapper-search">
@@ -25,14 +27,18 @@
     <div class="divisor-line"></div>
     <div class="wrapper-list">
       <ul>
-        <li class="pointing">
-          <font-awesome-icon icon="paw" class="icon-list" />
-          Random
-        </li>
-        <li class="pointing">
-          <font-awesome-icon icon="heart" class="icon-list" />
-          Favorites
-        </li>
+        <router-link to="/" class="router-styles">
+          <li class="pointing">
+            <font-awesome-icon icon="paw" class="icon-list" />
+            Random
+          </li>
+        </router-link>
+        <router-link to="/fav" class="router-styles">
+          <li class="pointing">
+            <font-awesome-icon icon="heart" class="icon-list" />
+            Favorites
+          </li>
+        </router-link>
       </ul>
     </div>
   </header>
@@ -58,6 +64,11 @@ export default {
 </script>
 
 <style>
+.router-styles {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .header {
   background-color: #000;
   color: #ffffff;
