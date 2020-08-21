@@ -11,7 +11,7 @@
         <input
           v-model="search"
           type="text"
-          placeholder="🔎   Write something, example: 'dog'"
+          placeholder="🔎   Write something, example: 'dogs'"
           class="search"
         />
         <input

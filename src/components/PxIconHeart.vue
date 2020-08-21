@@ -20,7 +20,6 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  /* border: 1px solid #48b8eb; */
 }
 
 .wrapper-icon-heart:hover {
