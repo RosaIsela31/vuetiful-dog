@@ -1,8 +1,8 @@
 <template>
   <div class="card">
-    <div class="prueba">
+    <div class="wrapper-title-heart">
       <h3 class="title-gift">{{ title }}</h3>
-      <px-icon-heart />
+      <px-icon-heart @click="toggleLikeClick" />
     </div>
     <div class="div-divisor"></div>
     <figure class="figure">
@@ -18,6 +18,16 @@ export default {
   props: ["title", "key", "id", "image"],
   components: {
     PxIconHeart
+  },
+  methods: {
+    toggleLikeClick() {
+      let items = {
+        id: this.id,
+        image: this.image,
+        title: this.title
+      };
+      this.$emit("toggleLikeClick", items);
+    }
   }
 };
 </script>
@@ -35,7 +45,7 @@ export default {
   grid-template-rows: 15% 5% 80%;
 }
 
-.prueba {
+.wrapper-title-heart {
   display: flex;
   justify-content: space-between;
 }
@@ -50,7 +60,6 @@ export default {
   width: 19.5rem;
 }
 .figure {
-  /* background-color: #48b8eb; */
   height: 20rem;
   width: 20rem;
   display: flex;
