@@ -91,4 +91,27 @@ export default {
     margin-top: 1rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .card {
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .img-gift {
+    height: 15rem;
+    width: 15rem;
+  }
+  .figure {
+    height: 16rem;
+    width: 16rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .div-divisor {
+    width: 20rem;
+  }
+}
 </style>

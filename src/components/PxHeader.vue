@@ -207,4 +207,10 @@ ul {
     margin-left: 1rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .search {
+    width: 16rem;
+  }
+}
 </style>

@@ -33,4 +33,10 @@ export default {
 .wrapper-icon-heart:hover .icon-heart {
   color: #ffffff;
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper-icon-heart {
+    margin-right: 2rem;
+  }
+}
 </style>
