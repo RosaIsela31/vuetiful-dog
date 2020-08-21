@@ -8,6 +8,7 @@
         :title="item.title"
         :id="item.id"
         :image="item.images.original.url"
+        :like="item.like"
         @toggleLikeClick="toggleLike"
       />
     </div>
@@ -15,7 +16,7 @@
 </template>
 
 <script>
-import store from "../store/index";
+// import store from "../store/index";
 import axios from "axios";
 import PxHeader from "@/components/PxHeader";
 import PxCard from "@/components/PxCard";
@@ -40,6 +41,7 @@ export default {
       axios.get(completeUrl).then(response => {
         let resp = response.data.data;
         resp = resp.map(elem => {
+          elem.like = false;
           console.log("resp", resp);
           this.data.push(elem);
         });
@@ -55,6 +57,7 @@ export default {
       axios.get(completeUrl).then(response => {
         let resp = response.data.data;
         resp = resp.map(elem => {
+          elem.like = false;
           console.log("resp", resp);
           this.data.push(elem);
         });
@@ -64,11 +67,9 @@ export default {
 
     toggleLike(data) {
       let findId = this.info.find(item => item.id === data.id);
-
       findId.like = data.like;
-
       // console.log("findId.like", findId.like);
-      store.commit("toggleFavs", findId);
+      this.$store.commit("toggleFavs", findId);
       console.log("this.$store", this.$store);
     }
   },
@@ -87,6 +88,13 @@ export default {
 
 @media screen and (max-width: 1024px) {
   .container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: chocolate;
     grid-template-columns: 100%;
   }
 }
