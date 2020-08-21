@@ -19,14 +19,15 @@ The are the steps I followed to complete the challenge
 _Check the Giphy API_
 
 - Check Api endpoint to know how to apply the requisites of the challenge
-- Add filters to URL endpoint. (Bring 5 items about the word "dog").
+- Add filters to URL endpoint. (Bring 5 items about the word "dog")
 
 _Display the gifts in a list using the data available from the API_
 
 - Perform a GET request to the API and axios the data array
 - Pass the array of offers as props to the PxCard component
-- Map the props to generate an automatic list. Show name and image.
+- Map the props to generate an automatic list. Show name and image
 - Apply Styles and Design UI
+- Add media queries to do a responsive app
 
 _Add Test_
 
@@ -52,4 +53,4 @@ Have a code editor, a terminal and that's all.
 
 _Rosa Isela L. Palma_
 
-## Happy Code!
+### Happy Code!

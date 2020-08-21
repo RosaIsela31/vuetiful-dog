@@ -13,7 +13,8 @@ library.add(faDog, faHeart, faPaw);
 
 Vue.config.productionTip = false;
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-
+const prueba = store.state;
+console.log("prueba", prueba);
 new Vue({
   store: store,
   router: router,

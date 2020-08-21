@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="toggleLikeClick">
     <div class="wrapper-title-heart">
       <h3 class="title-gift">{{ title }}</h3>
       <px-icon-heart @click="toggleLikeClick" />
@@ -15,7 +15,7 @@
 import PxIconHeart from "@/components/PxIconHeart";
 export default {
   name: "PxCard",
-  props: ["title", "key", "id", "image"],
+  props: ["title", "key", "id", "image", "like"],
   components: {
     PxIconHeart
   },
@@ -23,6 +23,7 @@ export default {
     toggleLikeClick() {
       let data = {
         id: this.id,
+        like: !this.like,
         image: this.image,
         title: this.title
       };
