@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import store from "../store/index";
 import axios from "axios";
 import PxHeader from "@/components/PxHeader";
 import PxCard from "@/components/PxCard";
@@ -61,12 +62,14 @@ export default {
       this.search = "";
     },
 
-    toggleLike(items) {
-      let findId = this.info.find(item => item.id === items.id);
+    toggleLike(data) {
+      let findId = this.info.find(item => item.id === data.id);
 
-      findId.like = items.like;
+      findId.like = data.like;
 
-      console.log("findId.like", findId.like);
+      // console.log("findId.like", findId.like);
+      store.commit("toggleFavs", findId);
+      console.log("this.$store", this.$store);
     }
   },
 

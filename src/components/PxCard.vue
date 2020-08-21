@@ -21,12 +21,12 @@ export default {
   },
   methods: {
     toggleLikeClick() {
-      let items = {
+      let data = {
         id: this.id,
         image: this.image,
         title: this.title
       };
-      this.$emit("toggleLikeClick", items);
+      this.$emit("toggleLikeClick", data);
     }
   }
 };

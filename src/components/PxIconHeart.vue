@@ -23,7 +23,7 @@ export default {
 }
 
 .wrapper-icon-heart:hover {
-  background-color: #48b8eb;
+  background-color: #d90429;
   border: none;
 }
 .icon-heart {
