@@ -74,4 +74,21 @@ export default {
   background-color: #48b8eb;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 35rem;
+    width: 30rem;
+  }
+
+  .img-gift {
+    height: 24rem;
+    width: 22rem;
+  }
+  .figure {
+    height: 25rem;
+    width: 25rem;
+    margin-top: 1rem;
+  }
+}
 </style>

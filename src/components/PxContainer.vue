@@ -94,8 +94,9 @@ export default {
 
 @media screen and (max-width: 768px) {
   .container {
-    background-color: chocolate;
     grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
   }
 }
 </style>

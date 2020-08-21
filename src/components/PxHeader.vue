@@ -201,5 +201,10 @@ ul {
   .header {
     height: 15rem;
   }
+
+  .search {
+    width: 20rem;
+    margin-left: 1rem;
+  }
 }
 </style>
