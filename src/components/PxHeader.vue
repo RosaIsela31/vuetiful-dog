@@ -207,4 +207,20 @@ ul {
     margin-left: 1rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .search {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    width: 10rem;
+  }
+
+  .icon-list {
+    display: none;
+  }
+}
 </style>
