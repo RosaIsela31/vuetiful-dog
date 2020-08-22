@@ -16,7 +16,6 @@
 </template>
 
 <script>
-// import store from "../store/index";
 import axios from "axios";
 import PxHeader from "@/components/PxHeader";
 import PxCard from "@/components/PxCard";
@@ -27,36 +26,21 @@ export default {
     return {
       data: [],
       URL_BASE: "https://api.giphy.com/v1/gifs/search?q=",
-      search: "",
+      search: ""
     };
   },
 
   components: { PxCard, PxHeader },
 
   methods: {
-    findDogs() {
-      this.info = [];
-      let completeUrl = `${this.URL_BASE}dog&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
-      axios.get(completeUrl).then((response) => {
-        let resp = response.data.data;
-        resp = resp.map((elem) => {
-          elem.like = false;
-          console.log("resp", resp);
-          this.data.push(elem);
-        });
-      });
-    },
-
     newSearch(search) {
       this.search = search;
-      this.info = [];
       this.data = [];
       let completeUrl = `${this.URL_BASE}${this.search}&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
-      axios.get(completeUrl).then((response) => {
+      axios.get(completeUrl).then(response => {
         let resp = response.data.data;
-        resp = resp.map((elem) => {
+        resp.map(elem => {
           elem.like = false;
-          console.log("resp", resp);
           this.data.push(elem);
         });
       });
@@ -64,17 +48,15 @@ export default {
     },
 
     toggleLike(data) {
-      let findId = this.info.find((item) => item.id === data.id);
+      let findId = this.data.find(items => items.id == data.id);
       findId.like = data.like;
-      // console.log("findId.like", findId.like);
       this.$store.commit("toggleFavs", findId);
-      console.log("this.$store", this.$store);
-    },
+    }
   },
 
   created() {
-    this.findDogs();
-  },
+    this.newSearch("dog");
+  }
 };
 </script>
 

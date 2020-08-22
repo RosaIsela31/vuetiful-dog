@@ -10,13 +10,13 @@ export default {
 
   data() {
     return {
-      assets: [],
+      assets: []
     };
   },
 
   mounted() {
     console.log("process.env.VUE_APP_API_KEY ", process.env.VUE_APP_API_KEY);
-  },
+  }
 };
 </script>
 
