@@ -15,6 +15,9 @@ export default {
     };
   },
 
+  mounted() {
+    console.log("process.env.VUE_APP_API_KEY", process.env.VUE_APP_API_KEY);
+  },
   created() {
     api.getApi().then(assets => (this.assets = assets));
   }
