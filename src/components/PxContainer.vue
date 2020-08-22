@@ -37,11 +37,7 @@ export default {
     findDogs() {
       this.info = [];
       let completeUrl = `${this.URL_BASE}dog&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
-<<<<<<< HEAD
       axios.get(completeUrl).then((response) => {
-=======
-      axios.get(completeUrl).then(response => {
->>>>>>> 9c95fc83c5bd628a8e5b204e7af92391f18c9051
         let resp = response.data.data;
         resp = resp.map((elem) => {
           elem.like = false;
@@ -56,11 +52,7 @@ export default {
       this.info = [];
       this.data = [];
       let completeUrl = `${this.URL_BASE}${this.search}&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
-<<<<<<< HEAD
       axios.get(completeUrl).then((response) => {
-=======
-      axios.get(completeUrl).then(response => {
->>>>>>> 9c95fc83c5bd628a8e5b204e7af92391f18c9051
         let resp = response.data.data;
         resp = resp.map((elem) => {
           elem.like = false;
