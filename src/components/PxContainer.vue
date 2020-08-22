@@ -3,7 +3,7 @@
     <px-header :search="search" @customclick="newSearch" />
     <div class="container">
       <px-card
-        v-for="(item, key) in data"
+        v-for="(item, key) in info"
         :key="key"
         :title="item.title"
         :id="item.id"
@@ -24,7 +24,7 @@ export default {
 
   data() {
     return {
-      data: [],
+      info: [],
       URL_BASE: "https://api.giphy.com/v1/gifs/search?q=",
       search: ""
     };
@@ -35,22 +35,22 @@ export default {
   methods: {
     newSearch(search) {
       this.search = search;
-      this.data = [];
+      this.info = [];
       let completeUrl = `${this.URL_BASE}${this.search}&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
       axios.get(completeUrl).then(response => {
         let resp = response.data.data;
         resp.map(elem => {
           elem.like = false;
-          this.data.push(elem);
+          this.info.push(elem);
         });
       });
       this.search = "";
     },
 
     toggleLike(data) {
-      let findId = this.data.find(items => items.id == data.id);
-      findId.like = data.like;
-      this.$store.commit("toggleFavs", findId);
+      let gifLike = this.info.find(items => items.id == data.id);
+      gifLike.like = data.like;
+      this.$store.commit("toggleFavs", gifLike);
     }
   },
 

@@ -2,8 +2,12 @@
   <div class="card">
     <div class="wrapper-title-heart">
       <h3 class="title-gift">{{ title }}</h3>
-      <div @click="toggleLikeClick">
-        <px-icon-heart />
+      <div
+        :class="isFavorite ? 'wrapper-icon-heart-liked' : 'wrapper-icon-heart'"
+        class="wrapper-icon-heart"
+        @click="toggleLikeClick"
+      >
+        <font-awesome-icon icon="heart" class="icon-heart" />
       </div>
     </div>
     <div class="div-divisor"></div>
@@ -14,13 +18,19 @@
 </template>
 
 <script>
-import PxIconHeart from "@/components/PxIconHeart";
 export default {
   name: "PxCard",
   props: ["title", "key", "id", "image", "like"],
-  components: {
-    PxIconHeart
+
+  computed: {
+    isFavorite() {
+      let favPictures = this.$store.state.favorites;
+      let index = favPictures.findIndex(picture => picture.id === this.id);
+
+      return index >= 0;
+    }
   },
+
   methods: {
     toggleLikeClick() {
       let data = {
@@ -136,6 +146,57 @@ export default {
   .div-divisor {
     width: 15rem;
     margin-top: 2rem;
+  }
+}
+
+.wrapper-icon-heart {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #c8d542;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.wrapper-icon-heart-liked {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #d90429;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.wrapper-icon-heart:hover {
+  background-color: #d90429;
+  border: none;
+}
+.icon-heart {
+  color: #ffffff;
+}
+
+.wrapper-icon-heart:hover .icon-heart {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper-icon-heart {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .wrapper-icon-heart {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .icon-heart {
+    font-size: 0.5rem;
   }
 }
 </style>

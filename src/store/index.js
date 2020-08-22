@@ -11,9 +11,7 @@ export default new Vuex.Store({
   },
   mutations: {
     toggleFavs(state, item) {
-      state.favorites = [];
       state.favorites.push(item);
-      // console.log("this.favorites", this.favorites);
       // let index = state.favorites.findIndex(i => i.id === item.id);
       // if (index >= 0) {
       //   state.favorites.splice(index, 1);
