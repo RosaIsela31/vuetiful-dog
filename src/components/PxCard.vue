@@ -1,8 +1,10 @@
 <template>
-  <div class="card" @click="toggleLikeClick">
+  <div class="card">
     <div class="wrapper-title-heart">
       <h3 class="title-gift">{{ title }}</h3>
-      <px-icon-heart @click="toggleLikeClick" />
+      <div @click="toggleLikeClick">
+        <px-icon-heart />
+      </div>
     </div>
     <div class="div-divisor"></div>
     <figure class="figure">

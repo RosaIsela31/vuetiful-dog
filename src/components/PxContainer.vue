@@ -48,7 +48,7 @@ export default {
     },
 
     toggleLike(data) {
-      let findId = this.info.find(items => items.id == data.id);
+      let findId = this.data.find(items => items.id == data.id);
       findId.like = data.like;
       this.$store.commit("toggleFavs", findId);
     }
