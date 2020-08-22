@@ -5,19 +5,18 @@
 </template>
 
 <script>
-import api from "./api";
 export default {
   name: "App",
 
   data() {
     return {
-      assets: []
+      assets: [],
     };
   },
 
-  created() {
-    api.getApi().then(assets => (this.assets = assets));
-  }
+  mounted() {
+    console.log("process.env.VUE_APP_API_KKEY ", process.env.VUE_APP_API__KEY);
+  },
 };
 </script>
 
