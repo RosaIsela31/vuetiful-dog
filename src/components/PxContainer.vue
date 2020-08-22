@@ -27,7 +27,7 @@ export default {
     return {
       data: [],
       URL_BASE: "https://api.giphy.com/v1/gifs/search?q=",
-      search: ""
+      search: "",
     };
   },
 
@@ -37,9 +37,13 @@ export default {
     findDogs() {
       this.info = [];
       let completeUrl = `${this.URL_BASE}dog&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
+<<<<<<< HEAD
+      axios.get(completeUrl).then((response) => {
+=======
       axios.get(completeUrl).then(response => {
+>>>>>>> 9c95fc83c5bd628a8e5b204e7af92391f18c9051
         let resp = response.data.data;
-        resp = resp.map(elem => {
+        resp = resp.map((elem) => {
           elem.like = false;
           console.log("resp", resp);
           this.data.push(elem);
@@ -52,9 +56,13 @@ export default {
       this.info = [];
       this.data = [];
       let completeUrl = `${this.URL_BASE}${this.search}&api_key=${process.env.VUE_APP_API_KEY}&limit=5`;
+<<<<<<< HEAD
+      axios.get(completeUrl).then((response) => {
+=======
       axios.get(completeUrl).then(response => {
+>>>>>>> 9c95fc83c5bd628a8e5b204e7af92391f18c9051
         let resp = response.data.data;
-        resp = resp.map(elem => {
+        resp = resp.map((elem) => {
           elem.like = false;
           console.log("resp", resp);
           this.data.push(elem);
@@ -64,17 +72,17 @@ export default {
     },
 
     toggleLike(data) {
-      let findId = this.info.find(item => item.id === data.id);
+      let findId = this.info.find((item) => item.id === data.id);
       findId.like = data.like;
       // console.log("findId.like", findId.like);
       this.$store.commit("toggleFavs", findId);
       console.log("this.$store", this.$store);
-    }
+    },
   },
 
   created() {
     this.findDogs();
-  }
+  },
 };
 </script>
 
