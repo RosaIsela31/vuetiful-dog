@@ -39,4 +39,15 @@ export default {
     margin-right: 2rem;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .wrapper-icon-heart {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .icon-heart {
+    font-size: 0.5rem;
+  }
+}
 </style>

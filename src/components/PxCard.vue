@@ -114,4 +114,26 @@ export default {
     width: 20rem;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .card {
+    height: 20rem;
+    width: 15rem;
+  }
+
+  .img-gift {
+    height: 12rem;
+    width: 12rem;
+  }
+  .figure {
+    height: 13rem;
+    width: 11rem;
+    margin-top: 2rem;
+  }
+
+  .div-divisor {
+    width: 15rem;
+    margin-top: 2rem;
+  }
+}
 </style>
