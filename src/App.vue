@@ -15,7 +15,7 @@ export default {
   },
 
   mounted() {
-    console.log("process.env.VUE_APP_API_KKEY ", process.env.VUE_APP_API__KEY);
+    console.log("process.env.VUE_APP_API_KEY ", process.env.VUE_APP_API_KEY);
   },
 };
 </script>
