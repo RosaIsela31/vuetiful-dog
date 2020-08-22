@@ -53,4 +53,4 @@ Have a code editor, a terminal and that's all.
 
 _Rosa Isela L. Palma_
 
-### Happy Code!
+### Happy Coding! ❤️
