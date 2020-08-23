@@ -32,7 +32,7 @@ _Display the gifts in a list using the data available from the API_
 _Add Test_
 
 - Deploy of the Vuetiful Dog App with Github pages
-- install cypress library
+- install plugin of cypress `@vue/cli-plugin-e2e-cypress` from vue ui
 - Create the tests of the project and run them into the browser with cypress
 
 ## Setting it up 🔧
@@ -48,7 +48,7 @@ Have a code editor, a terminal and that's all.
 - `cd vuetiful-dog`
 - `npm install`
 - Finally, you can run the project with `npm run serve`
-- You can run the tests with `npm run cypress:open` you can find all tests into the follow path `cypress > integration > vuetiful > testing.js`
+- You can run the tests with `npm run test:e2e` you can find all tests into the follow path `tests > e2e > specs > test.js`
 
 ## Developer 💻
 

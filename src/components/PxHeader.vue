@@ -29,14 +29,12 @@
       <ul>
         <router-link to="/" class="router-styles">
           <li class="pointing">
-            <font-awesome-icon icon="paw" class="icon-list" />
-            Random
+            <font-awesome-icon icon="paw" class="icon-list" />Random
           </li>
         </router-link>
         <router-link to="/fav" class="router-styles">
-          <li class="pointing">
-            <font-awesome-icon icon="heart" class="icon-list" />
-            Favorites
+          <li class="pointing" id="favs">
+            <font-awesome-icon icon="heart" class="icon-list" />Favorites
           </li>
         </router-link>
       </ul>
