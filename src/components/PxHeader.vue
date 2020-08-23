@@ -48,15 +48,14 @@
 export default {
   name: "PxHeader",
 
-  props: ["search"],
-
-  data() {
-    return {};
+  props: {
+    search: {
+      type: String
+    }
   },
 
   methods: {
     buttonClick() {
-      console.log("this.search", this.search);
       this.$emit("customclick", this.search);
     }
   }
@@ -184,20 +183,16 @@ ul {
 }
 
 @media screen and (max-width: 1024px) {
-  .search {
-    width: 12rem;
-  }
-
   .header {
     height: 13rem;
+  }
+
+  .search {
+    width: 12rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper-logo-search {
-    grid-template-columns: 100%;
-  }
-
   .header {
     height: 15rem;
   }
@@ -205,6 +200,10 @@ ul {
   .search {
     width: 20rem;
     margin-left: 1rem;
+  }
+
+  .wrapper-logo-search {
+    grid-template-columns: 100%;
   }
 }
 
@@ -215,12 +214,12 @@ ul {
 }
 
 @media screen and (max-width: 320px) {
-  .search {
-    width: 10rem;
-  }
-
   .icon-list {
     display: none;
+  }
+
+  .search {
+    width: 10rem;
   }
 }
 </style>
