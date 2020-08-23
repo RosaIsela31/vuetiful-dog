@@ -29,7 +29,7 @@ export default {
   components: { PxHeader, PxCard },
 
   created() {
-    this.myfavs();
+    this.getFavorites();
   },
 
   methods: {

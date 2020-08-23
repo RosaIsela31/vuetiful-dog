@@ -50,7 +50,7 @@ export default {
     toggleLike(data) {
       let gifLike = this.info.find(items => items.id == data.id);
       gifLike.like = data.like;
-      this.$store.commit("toggleFavs", gifLike);
+      this.$store.commit("toggleFavorites", gifLike);
     }
   },
 

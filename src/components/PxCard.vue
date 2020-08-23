@@ -20,7 +20,24 @@
 <script>
 export default {
   name: "PxCard",
-  props: ["title", "key", "id", "image", "like"],
+
+  props: {
+    title: {
+      type: String
+    },
+    key: {
+      type: String
+    },
+    id: {
+      type: String
+    },
+    image: {
+      type: String
+    },
+    like: {
+      type: String
+    }
+  },
 
   computed: {
     isFavorite() {
@@ -58,20 +75,12 @@ export default {
   grid-template-rows: 15% 5% 80%;
 }
 
-.wrapper-title-heart {
-  display: flex;
-  justify-content: space-between;
+.div-divisor {
+  height: 0.2rem;
+  background-color: #48b8eb;
+  margin-top: 1rem;
 }
 
-.title-gift {
-  padding: 0.5rem 0 0 2.5rem;
-  font-family: "Montserrat", sans-serif;
-}
-
-.img-gift {
-  height: 19.5rem;
-  width: 19.5rem;
-}
 .figure {
   height: 20rem;
   width: 20rem;
@@ -81,72 +90,18 @@ export default {
   margin-top: 2rem;
 }
 
-.div-divisor {
-  height: 0.2rem;
-  background-color: #48b8eb;
-  margin-top: 1rem;
+.icon-heart {
+  color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    height: 35rem;
-    width: 30rem;
-  }
-
-  .img-gift {
-    height: 24rem;
-    width: 22rem;
-  }
-  .figure {
-    height: 25rem;
-    width: 25rem;
-    margin-top: 1rem;
-  }
+.img-gift {
+  height: 19.5rem;
+  width: 19.5rem;
 }
 
-@media screen and (max-width: 480px) {
-  .card {
-    height: 25rem;
-    width: 20rem;
-  }
-
-  .img-gift {
-    height: 15rem;
-    width: 15rem;
-  }
-  .figure {
-    height: 16rem;
-    width: 16rem;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .div-divisor {
-    width: 20rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card {
-    height: 20rem;
-    width: 15rem;
-  }
-
-  .img-gift {
-    height: 12rem;
-    width: 12rem;
-  }
-  .figure {
-    height: 13rem;
-    width: 11rem;
-    margin-top: 2rem;
-  }
-
-  .div-divisor {
-    width: 15rem;
-    margin-top: 2rem;
-  }
+.title-gift {
+  padding: 0.5rem 0 0 2.5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .wrapper-icon-heart {
@@ -160,6 +115,16 @@ export default {
   margin: 1rem;
 }
 
+.wrapper-icon-heart:hover {
+  background-color: #ffffff;
+  border: none;
+  border: 1px solid #d90429;
+}
+
+.wrapper-icon-heart:hover .icon-heart {
+  color: #d90429;
+}
+
 .wrapper-icon-heart-liked {
   height: 2.5rem;
   width: 2.5rem;
@@ -171,32 +136,84 @@ export default {
   margin: 1rem;
 }
 
-.wrapper-icon-heart:hover {
-  background-color: #d90429;
-  border: none;
-}
-.icon-heart {
-  color: #ffffff;
+.wrapper-title-heart {
+  display: flex;
+  justify-content: space-between;
 }
 
-.wrapper-icon-heart:hover .icon-heart {
-  color: #ffffff;
+@media screen and (max-width: 768px) {
+  .card {
+    height: 35rem;
+    width: 30rem;
+  }
+
+  .figure {
+    height: 25rem;
+    width: 25rem;
+    margin-top: 1rem;
+  }
+
+  .img-gift {
+    height: 24rem;
+    width: 22rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .card {
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .div-divisor {
+    width: 20rem;
+  }
+
+  .figure {
+    height: 16rem;
+    width: 16rem;
+    margin-top: 1rem;
+  }
+
+  .img-gift {
+    height: 15rem;
+    width: 15rem;
+  }
+
   .wrapper-icon-heart {
     margin-right: 2rem;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .wrapper-icon-heart {
-    height: 1rem;
-    width: 1rem;
+  .card {
+    height: 20rem;
+    width: 15rem;
+  }
+
+  .div-divisor {
+    width: 15rem;
+    margin-top: 2rem;
+  }
+
+  .figure {
+    height: 13rem;
+    width: 11rem;
+    margin-top: 2rem;
   }
 
   .icon-heart {
     font-size: 0.5rem;
+  }
+
+  .img-gift {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .wrapper-icon-heart {
+    height: 1rem;
+    width: 1rem;
   }
 }
 </style>
